@@ -1,0 +1,17 @@
+
+class number:
+    def __init__(self,a,b,c):
+        self.a=a
+        self.b=b
+        self.c=c
+    def __add__(self,other):
+        a=self.a+other.a
+        b=self.b+other.b
+        c=self.c+other.c
+        result=number(a,b,c)
+        return result
+
+n1=number(1,29,30)
+n2=number(4,59,60)
+result=n1+n2
+print(result.a, result.b, result.c)

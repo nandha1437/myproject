@@ -1,0 +1,7 @@
+class robo:
+    x=100
+    def chitti(self):
+        print("hai")
+a=robo()
+a.chitti()
+print(a.x)

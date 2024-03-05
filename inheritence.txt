@@ -1,0 +1,96 @@
+'''#multiple
+class animal:
+    def __init__(self, name):
+        self.name = name
+
+    def display(self):
+        print("I am an animal and belong to", self.name)
+
+class dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+
+    def display1(self):
+        print("I am", self.name, "and I belong to", self.breed)
+
+class dog1(animal, dog):
+    def __init__(self, name, breed, colour):
+        animal.__init__(self, name)  
+        dog.__init__(self, name, breed)  
+        self.colour = colour
+
+    def display2(self):
+        print("I am", self.name, "and I belong to", self.breed, "Colour is", self.colour)
+
+a = animal("parent class")
+a.display()
+
+a1 = dog("child dog", "lab")
+a1.display1()
+
+a2 = dog1("second child dog", "german shepherd", "black")
+a2.display2()
+'''
+
+'''#class object
+class person:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def display(self):
+        print("i am",self.name,"my age is ",self.age)
+a=person("nandha","23")
+a.display()
+'''
+
+
+#single
+'''
+class animal:
+    def __init__(self, name):
+        self.name = name
+
+    def display(self):
+        print("I am an animal and belong to", self.name)
+
+class dog(animal):
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+
+    def display1(self):
+        print("I am", self.name, "and I belong to", self.breed)
+        
+a=dog("puppy","lab")
+a.display1()
+'''
+
+'''
+#multilevel
+class human:
+    def __init__(self,name):
+        self.name=name
+    def display(self):
+        print("i am",self.name)
+class male(human):
+    def __init__(self,name,action):
+        super().__init__(name)
+        self.action=action
+        
+    def display1(self):
+        print("my name is",self.name,"i love",self.action)
+        
+class female(male):
+    def __init__(self,name,action,salary):
+        super().__init__(name,action)
+        self.salary=salary
+        
+    def display2(self):
+        print("my name is",self.name,"i love",self.action,"for my action my salary is",self.salary)
+a=female("sai pallavi","drama","200000")
+a.display2()
+a1=male("nandha","cricket")
+a1.display1()
+a2=human(" parent class")
+a2.display()

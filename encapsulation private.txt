@@ -1,0 +1,9 @@
+'''
+class robo:
+    __x=100
+    def chitti(self):
+        print(self.__x)
+a=robo()
+a.chitti()
+'''
+
